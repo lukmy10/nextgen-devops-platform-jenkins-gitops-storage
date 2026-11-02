@@ -70,6 +70,14 @@ Return to the project root directory. The entire platform lifecycle—from bare-
 ansible-playbook ansible/bootstrap.yml
 ```
 
+**Teardown:** To cleanly destroy all provisioned cloud resources, navigate to the directory and run the destroy command:
+```bash
+cd terraform
+terraform destroy
+```
+*Note: You will be prompted to type `yes` to confirm the destruction of the resources.*
+
+
 ### 📊 Automation Outputs & Verification
 Once the execution hits **Task 15** in the Ansible playbook, the stdout will stream the complete output from `final.sh` directly to your console. This summary provides everything you need to start using the platform immediately:
 
