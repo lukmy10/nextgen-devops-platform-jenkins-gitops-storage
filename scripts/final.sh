@@ -83,8 +83,7 @@ echo
 echo "------------------------------------------"
 echo "ARGOCd WEB PASSWD"
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d > passwd_a.txt
-PASSWD_A=$(cat passwd_a.txt)
-echo "$PASSWD_A"
+cat passwd_a.txt
 
 
 echo
