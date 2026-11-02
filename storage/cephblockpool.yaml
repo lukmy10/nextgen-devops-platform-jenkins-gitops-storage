@@ -1,0 +1,9 @@
+apiVersion: ceph.rook.io/v1
+kind: CephBlockPool
+metadata:
+  name: replicapool
+  namespace: rook-ceph
+spec:
+  failureDomain: host # Replicating data across different hosts for high availability
+  replicated:
+    size: 3 # Data will be replicated across 3 nodes for redundancy
