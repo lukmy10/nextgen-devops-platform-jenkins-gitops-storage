@@ -74,7 +74,7 @@ ansible-playbook ansible/bootstrap.yml
 To re-run the `final.sh` script (provided that the infrastructure is already up and running), execute the following Ansible playbook:
 
 ```bash
-ansible-playbook bootstrap.yml --tags "terraform,final"
+ansible-playbook ansible/bootstrap.yml --tags "terraform,final"
 ```
 *Note: The `terraform` tag is required here to fetch the current state and IP addresses of the existing infrastructure before executing the `final` script tasks.*
 
